@@ -1,4 +1,5 @@
-<?php include("model/post1.model.php"); ?>
+    <!--La page post1.model.php-->
+    <?php include("model/post1.model.php"); ?>
         <!-- Navigation-->
         <?php include("nav.inc.php"); ?>
 

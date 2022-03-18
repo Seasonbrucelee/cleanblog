@@ -1,4 +1,6 @@
-         <!-- Navigation-->
+        <?php include("model/about.model.php"); ?>       
+        
+        <!-- Navigation-->
         <?php include("nav.inc.php"); ?>
 
         <!-- Page Header-->

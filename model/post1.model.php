@@ -9,9 +9,10 @@ $content = '<b>Le Krump</b> est une danse née dans les années 2000 au cœur de
     .test {
         color:' . $color . ';
     }
-<style>
+</style>
 
 Origine: 
-Cette danse est née dans le ghetto de <span class="test">Los Angeles</span> au début des années 2002. Marqué par les guerres de gangs, le trafic de drogue, les interpellations musclées de la police et les émeutes raciales de 1992, Thomas Johnson décide dans un premier temps de créer le personnage de Tommy le Clown pour animer des goûters d\'anniversaires dans les ghettos1,2. Il invente à cette occasion une nouvelle danse rapidement imitée par les enfants des quartiers : le clown dancing. En grandissant, certains d\'entre eux développent cette nouvelle forme d\'expression en créant le K.R.U.M.P. : Kingdom Radically Uplifted Mighty Praise, la forme évoluée du clown dancing.'
+Cette danse est née dans le ghetto de <span class="test">Los Angeles</span> au début des années 2002. Marqué par les guerres de gangs, le trafic de drogue, les interpellations musclées de la police et les émeutes raciales de 1992, Thomas Johnson décide dans un premier temps de créer le personnage de Tommy le Clown pour animer des goûters d\'anniversaires dans les ghettos1,2. <br>
+Il invente à cette occasion une nouvelle danse rapidement imitée par les enfants des quartiers : le clown dancing. En grandissant, certains d\'entre eux développent cette nouvelle forme d\'expression en créant le K.R.U.M.P. : Kingdom Radically Uplifted Mighty Praise, la forme évoluée du clown dancing.'
 
 /**Le fait d'enlever la balise fermante de PHP permet de ne pas avoir du HTML. Comme ça nous avaons purement du code PHP  */;

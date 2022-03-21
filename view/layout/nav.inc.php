@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
+
+        <!-- Titre pour les onglets about.php, contact.php, post.php, index.php-->
+
         <title><?=$layout_title?></title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->

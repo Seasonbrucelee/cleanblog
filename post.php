@@ -1,6 +1,13 @@
-    <!--La page post1.model.php-->
-    <?php include("model/post1.model.php"); ?>
+   
+   <!--La page post1.model.php-->
+    <?php 
+    //var_dump($_GET);
+    //exit;
+    //die ($_GET['article']); http://localhost:8080/cleanblog/post.php?article=41 affiche le chiffre 41 sur mon navigateur
+    //echo($_GET['article']);
 
-    <?php $layout_title =  $title; ?>
+    include("model/post1.model.php");
 
-    <?php include("view/post.view.php"); ?>
+    $layout_title =  $title; 
+
+    include("view/post.view.php"); 

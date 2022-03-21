@@ -1,7 +1,7 @@
-    <?php include("model/home.model.php"); ?>
+    <?php 
+    include("model/home.model.php"); 
 
-    <?php $layout_title = 'Titre =' . $title; ?>
+    $layout_title = 'Titre =' . $title; 
 
-
-    <?php include("view/home.model.php"); ?>
+    include("view/home.view.php"); 
         

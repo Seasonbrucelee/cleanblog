@@ -11,7 +11,7 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
 
                 <!--Je déclare une variable que j'appel au-dessus en php pour que cela soit en dynamique-->
-                <p> <?php echo $content; ?>
+                <p> <?= $data["post_content"] ?>
                 </p>
             </div>
         </div>

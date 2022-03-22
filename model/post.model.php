@@ -1,4 +1,49 @@
 <?php
+// Post model
+
+include("config/config.inc.php");
+include("model/pdo.inc.php");
+
+try {
+    $query = "
+    SELECT post_date, post_content, post_title, display_name, cat_descr
+    FROM blog_posts
+    
+    INNER JOIN blog_users
+    ON post_author = ID
+    
+    INNER JOIN blog_categories
+    ON post_category = cat_id
+    
+    WHERE post_ID = " . $_GET["article"];
+    //die($query);
+
+    $req = $pdo->query($query);
+
+    //var_dump($req); affichage des variables type tableau et plus complexe
+    //echo($req); Pour afficher des variables simple de type string
+    //while($data = $req->fetch()) {
+        //echo "fetch()";
+         //var_dump($data);
+         //echo "<br>" . $data["post_title"] . "<br>";
+        //}
+    $data = $req->fetch();
+
+         //var_dump($data);
+    }
+//}
+catch (Exception $e){
+    die("Erreur MySql :" . $e->getMessage());
+}
+
+$bg = 'assets/img/home-bg.jpg';
+$title= "KRUMP Vie";
+$subtitle="Connaître le Krump";
+
+
+
+
+/*
 if ((!isset($_GET['article'])) || ($_GET['article'] == '1')) {
 
 $bg = 'assets/img/post-bg.jpg';
@@ -42,7 +87,7 @@ else {
     $title= 'Erreur 404';
     $subtitle='Page inexistante !';
     $content = ' ';
-}
+}*/
 
 
 

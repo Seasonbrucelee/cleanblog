@@ -1,12 +1,17 @@
-   
-   <!--La page post1.model.php-->
+   <!--La page post.model.php-->
     <?php 
     //var_dump($_GET);
     //exit;
     //die ($_GET['article']); http://localhost:8080/cleanblog/post.php?article=41 affiche le chiffre 41 sur mon navigateur
     //echo($_GET['article']);
 
-    include("model/post1.model.php");
+    // Ce controller reçoit un parametre article
+
+    if (!isset($_GET["article"])) {
+       die("Manque paramètre !");
+    }
+
+    include("model/post.model.php");
 
     $layout_title =  $title; 
 

@@ -1,4 +1,4 @@
 <?php
 $bg = 'assets/img/contact-bg.jpg';
-$title= "KRUMP Vie";
-$subtitle="Contactez-nous";
+$header_title= "KRUMP Vie";
+$header_subtitle="Contactez-nous";

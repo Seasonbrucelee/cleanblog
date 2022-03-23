@@ -6,7 +6,7 @@ include("model/pdo.inc.php");
 
 try {
     $query = "
-    SELECT post_date, post_content, post_title, display_name, cat_descr
+    SELECT post_date, post_content, post_title, post_img_url, display_name, cat_descr
     FROM blog_posts
     
     INNER JOIN blog_users
@@ -36,12 +36,9 @@ catch (Exception $e){
     die("Erreur MySql :" . $e->getMessage());
 }
 
-$bg = 'assets/img/home-bg.jpg';
-$title= "KRUMP Vie";
-$subtitle="Connaître le Krump";
-
-
-
+//$bg = 'assets/img/home-bg.jpg';
+//$title= "KRUMP Vie";
+//$subtitle="Connaître le Krump";
 
 /*
 if ((!isset($_GET['article'])) || ($_GET['article'] == '1')) {

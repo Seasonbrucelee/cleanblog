@@ -7,7 +7,7 @@ include("model/pdo.inc.php");
 
 try {
     $query = "
-    SELECT post_ID, post_date, LEFT(post_content, " .TRONCATURE . ") AS post_content, post_title, display_name, cat_descr
+    SELECT post_ID, post_date, LEFT(post_content, " .TRONCATURE . ") AS post_content, post_title, post_img_url, display_name, cat_descr
     FROM blog_posts
     
     INNER JOIN blog_users
@@ -38,8 +38,8 @@ catch (Exception $e){
 }
 
 $bg = 'assets/img/home-bg.jpg';
-$title= "KRUMP Vie";
-$subtitle="Connaître le Krump";
+$header_title= "KRUMP Vie";
+$header_subtitle="Connaître le Krump";
 
 /**Variables pour le lien mon premier article qui se trouve dans index.php */
 /*$titre_art_1 = 'KRUMP';

@@ -13,6 +13,13 @@
                 <!--Je déclare une variable que j'appel au-dessus en php pour que cela soit en dynamique-->
                 <p> <?= $data["post_content"] ?>
                 </p>
+                <p class="post-meta">
+                            Rédigé par
+                            <a href="#!"><?= $data["display_name"] ?></a>
+                            le <?=$data["post_date"] ?>
+                            <br>
+                            Classé dans <b><?= $data["cat_descr"] ?></b>
+                </p>
             </div>
         </div>
     </div>

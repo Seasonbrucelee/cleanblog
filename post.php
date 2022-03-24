@@ -10,7 +10,6 @@
     if (!isset($_GET["article"])) {
        die("Manque paramètre !");
     }
-
     include("model/post.model.php");
     $bg = $data['post_img_url'];
     $layout_title =  $data['post_title']; 

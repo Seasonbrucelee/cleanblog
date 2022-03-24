@@ -1,7 +1,6 @@
 <!-- Navigation-->
 <?php include("view/layout/nav.inc.php"); ?>
 
-<!-- Page Header-->
 <?php include("view/layout/header.inc.php"); ?>
 
 <!-- Main Content-->
@@ -18,28 +17,25 @@
                     <!-- To make this form functional, sign up at-->
                     <!-- https://startbootstrap.com/solution/contact-forms-->
                     <!-- to get an API token!-->
-                    <form id="contactForm" action="contact.add.php">
+                    <form id="contactForm" action="contact.add.php" method="post">
                         <div class="form-floating">
-                            <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                            <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required maxlength="25"/>
                             <label for="name">Nom</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">Le nom est obligatoire</div>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">Le nom est obligatoire.</div>
                         </div>
-
                         <div class="form-floating">
-                            <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email..." data-sb-validations="required,email" />
+                            <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email..." required />
                             <label for="email">Email</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">L'email est obligatoire</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                             <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                         </div>
-
                         <div class="form-floating">
-                            <input class="form-control" id="phone" name="phone" type="tel" placeholder="Enter your phone number..." data-sb-validations="required" />
+                            <input class="form-control" id="phone" name="phone" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" placeholder="Enter your phone number..." required />
                             <label for="phone">Phone Number</label>
                             <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                         </div>
-
                         <div class="form-floating">
-                            <textarea class="form-control" id="message" name="message" placeholder="Enter your message here..." style="height: 12rem" data-sb-validations="required"></textarea>
+                            <textarea class="form-control" id="message" name="message" placeholder="Enter your message here..." style="height: 12rem" required></textarea>
                             <label for="message">Message</label>
                             <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                         </div>
@@ -60,7 +56,9 @@
                         <!---->
                         <!-- This is what your users will see when there is-->
                         <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                        </div>
                         <!-- Submit Button-->
                         <button class="btn btn-primary text-uppercase" id="" type="submit">Send</button>
                     </form>
@@ -69,8 +67,9 @@
         </div>
     </div>
 </main>
-<!-- Footer-->
-<?php include ("view/layout/footer.inc.php"); ?>
+
+<?php include("view/layout/footer.inc.php"); ?>
+
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 <!-- * *                               SB Forms JS                               * *-->
 <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->

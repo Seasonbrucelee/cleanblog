@@ -1,5 +1,4 @@
 <?php
-
 try{
     $dns ='mysql:host=' . DB_HOST .';dbname=' . DB_NAME;
     $options = array(

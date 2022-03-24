@@ -1,5 +1,4 @@
 <!-- MES CONSTANTES -->
-
 <?php
 define("DB_HOST", "localhost");
 define("DB_NAME", "afpa_blog1");

@@ -1,11 +1,17 @@
-<!-- HOME VIEW -->
-<!--MES PARAMETRES DE CONNECTION, AFFICHAGE ET MES VARIABLES -->
 <?php
+/* HOME VIEW */
+/* MES PARAMETRES DE CONNECTION, MES CONSTANTES ET AFFICHAGE */
+ /** INCLUSION DU FICHIER CONFIGURATION QUI CONTIENT MES CONSTANTES */
 
 include("config/config.inc.php");
+
+/** INCLUSION DU FICHIER DE CONNECTION A LA BASE DE DONNEES */
 include("model/pdo.inc.php");
 
+/** CONNECTION SERVEUR BD */
 try {
+
+    /*** EXECUTION DU  CODE */
     $query = "
     SELECT post_ID, post_date, LEFT(post_content, " .TRONCATURE . ") AS post_content, post_title, post_img_url, display_name, cat_descr
     FROM blog_posts
@@ -21,8 +27,9 @@ try {
 
     $req = $pdo->query($query);
 
-    //var_dump($req); affichage des variables type tableau et plus complexe
+    //var_dump($req); affichage des variables type tableau et qui sont plus complexe
     //echo($req); Pour afficher des variables simple de type string
+
     //while($data = $req->fetch()) {
         //echo "fetch()";
          //var_dump($data);
@@ -33,9 +40,20 @@ try {
          //var_dump($data);
     }
 //}
+
+/***SI ERREUR LE PROGRAMME SE DEBRANCHE VERS LE BLOC CATCH */
+
+/* Récupération de l'ERREUR dans le paramètre $e**/
+
 catch (Exception $e){
+
+    /**On traite l'erreur/ Ici un affichage (concatenation) et un arrêt (EXIT)) */
     die("Erreur MySql :" . $e->getMessage());
 }
+
+//** PAGE D'ACCUEIL**//
+
+/** LES DECLARATION DE VARIABLES POUR MON HEADER.INC.PHP (layout) **/
 
 $bg = 'assets/img/home-bg.jpg';
 $header_title= "KRUMP Vie";

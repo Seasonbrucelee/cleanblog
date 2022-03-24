@@ -19,10 +19,14 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
 
+                <!-- CREATION DE VARIABLE $ONEDATA POUR AVOIR UNE SEULE DONNEE -->
                 <?php foreach ($data as $onedata) {?>
                 
                     <!-- Post preview-->
                     <!-- LIEN POUR MES ARTICLES + VARIABLES DE home.model.php-->
+
+                    <!-- ARTICLE DE LA PAGE D'ACCUEIL (HOME) -->
+
                     <div class="post-preview">
                         <a href="post.php?article=<?=$onedata["post_ID"] ?>">
                             <h2 class="post-title"><?=$onedata["post_title"] ?></h2>
@@ -31,6 +35,7 @@
                     <img src= "<?=$onedata["post_img_url"] ?>" alt="">
 
                         <h3 class="post-subtitle"><?= $onedata["post_content"] //substr($onedata["post_content"], 0, 200) ?>[...]</h3>
+                        
                         <p class="post-meta">
                             Rédigé par
                             <a href="#!"><?= $onedata["display_name"] ?></a>
